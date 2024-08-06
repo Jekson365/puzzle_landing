@@ -1,0 +1,40 @@
+@import 'config.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+  font-family: $font-geo;
+}
+
+a {
+  color: $color-white;
+}
+
+body {
+  background: $color-dark;
+}
+
+.cover {
+  background: $color-dark;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-button {
+  border: 2px solid $color-green;
+  background: transparent;
+  color: white;
+  z-index: 5 !important;
+  font-size: 15px;
+  padding: 15px 20px;
+  border-radius: 7px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-green;
+    color: $color-dark;
+  }
+}

@@ -1,0 +1,18 @@
+@import '../config.scss';
+
+.footer-title {
+  font-size: 25px !important;
+  color: $color-green;
+  font-family: $font-geo !important;
+}
+
+.footer-data {
+  font-weight: bold;
+  color: $color-green;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: white;
+  }
+}

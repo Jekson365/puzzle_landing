@@ -1,0 +1,39 @@
+@import '../config.scss';
+
+.content-cover {
+  .title {
+    font-size: 30px;
+    color: white;
+    font-family: $font-geo;
+  }
+
+  .line {
+    width: 50px;
+    height: 1px;
+    background: $color-green;
+  }
+
+  .date {
+    color: white;
+    font-size: 20px;
+    font-family: $font-geo;
+  }
+
+  .description {
+    max-width: 900px;
+    color: $color-white;
+    font-weight: bold;
+  }
+
+}
+
+.slider-cover {
+  overflow: hidden;
+  height: 300px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

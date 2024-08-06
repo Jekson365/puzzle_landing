@@ -1,0 +1,119 @@
+@import "../config.scss";
+
+.panel-cover {
+  padding: 30px;
+  min-height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+.inner-dots {
+  z-index: -1 !important;
+  animation: dot_anim 3s infinite !important;
+}
+@keyframes dot_anim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.inner-dot-lines {
+  position: absolute;
+  width: 100%;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+}
+.second {
+  transform: rotate(180deg);
+  left: 50%;
+  opacity: 0.1;
+}
+
+.main-cover {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .overlay {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .cover-title {
+    color: white;
+    font-family: $font-geo;
+    font-size: 40px;
+  }
+
+  .cover-description {
+    color: $color-white;
+    font-size: 20px;
+    font-family: $font-geo;
+  }
+
+}
+
+.min-cover {
+  min-height: 30vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .overlay {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .cover-title {
+    color: white;
+    font-family: $font-geo;
+    font-size: 40px;
+  }
+
+  .cover-description {
+    color: $color-white;
+    font-size: 20px;
+    font-family: $font-geo;
+  }
+
+}
+
+.panel-content  {
+  z-index: 10 !important;
+  .title {
+    font-family: $font-geo;
+    font-size: 2.3rem;
+    color: white;
+  }
+
+  .description {
+    font-size: 1.0rem;
+    color: $color-white;
+    letter-spacing: 1px;
+  }
+}

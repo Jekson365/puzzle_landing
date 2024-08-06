@@ -1,0 +1,35 @@
+@import "../config.scss";
+
+.navigation {
+  .dot {
+    border: 2px solid $color-green;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  .line {
+    transition: 0.3s;
+    width: 40px;
+    height: 1px;
+    background: $color-white;
+  }
+
+  .line-active {
+    background: $color-green;
+  }
+
+  .dot-active {
+    background: $color-green;
+  }
+
+  .nav-item-active {
+    color: $color-green !important;
+  }
+
+  .nav-item {
+    color: white;
+    font-family: $font-geo;
+  }
+}
