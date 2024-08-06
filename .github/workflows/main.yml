@@ -32,4 +32,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}      # FTP username
         password: ${{ secrets.FTP_PASSWORD }}      # FTP password
         local-dir: ./build                         # Local build directory
-        server-dir: /path/to/deploy/on/server      # Path on the FTP server to deploy to
+        server-dir: public_html/     # Path on the FTP server to deploy to
