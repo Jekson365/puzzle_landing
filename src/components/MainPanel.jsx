@@ -6,6 +6,7 @@ import {PanelThree} from "./panels/PanelThree.jsx";
 import {Priorities} from "./priors/Priorities.jsx";
 import {Element} from 'react-scroll';
 import {PanelFour} from "./panels/PanelFour.jsx";
+import { PanelFive } from "./panels/PanelFive.jsx";
 
 
 export const MainPanel = () => {
@@ -25,6 +26,9 @@ export const MainPanel = () => {
             </Element>
             <Element name={'section-4'}>
                 <PanelFour/>
+            </Element>
+            <Element name={'section-5'}>
+                <PanelFive/>
             </Element>
         </>
     )

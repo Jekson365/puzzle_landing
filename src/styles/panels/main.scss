@@ -117,3 +117,38 @@
     letter-spacing: 1px;
   }
 }
+
+.priceing-box {
+  padding: 40px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 5px solid $color-dark-green;
+  box-shadow: 0 0 10px 0.4px $color-dark-green;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px 1px $color-dark-green;
+  }
+  .check-icon {
+    color: $color-dark-green;
+  }
+  .check-title {
+    color: white;
+    font-size: 19px;
+  }
+  .puzzle-size {
+    transition: 0.3;
+    color: rgba(255, 255, 255, 0.2);
+    z-index: -10 !important;
+    font-size: 60px !important;
+  }
+  .puzzle-size-2 {
+    color: $color-dark-green !important;
+  }
+}
+.line {
+  width: 25px;
+  height: 4px;
+  background-color: $color-dark-green;
+}
