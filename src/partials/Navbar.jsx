@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Stack from '@mui/material/Stack'
-import {Typography} from "@mui/material";
+import { Typography } from "@mui/material";
 import '../styles/partials/navbar.scss'
-import {Link} from 'react-scroll'
+import { Link } from 'react-scroll'
 
 
 export const Navbar = () => {
@@ -17,10 +17,13 @@ export const Navbar = () => {
     }, {
         id: 5, name: "პროექტები", active: false, sectionName: 'section-4'
     },
+    {
+        id: 6, name: "ფასები", active: false, sectionName: 'section-5'
+    },
     ]
     const [navItem, setNavItem] = useState(navItems)
     const handleNavChange = (currentId) => {
-        const updatedNavItems = navItem.map((item) => item.id === currentId ? {...item, active: true} : {
+        const updatedNavItems = navItem.map((item) => item.id === currentId ? { ...item, active: true } : {
             ...item, active: false
         });
         setNavItem(updatedNavItems);
@@ -41,8 +44,8 @@ export const Navbar = () => {
                 return (<>
                     <Link to={e.sectionName} smooth={true} duration={500}>
                         <Stack direction={'row'} gap={'10px'} alignItems={'center'}
-                               style={{cursor: "pointer"}}
-                               onClick={() => handleNavChange(e.id)}
+                            style={{ cursor: "pointer" }}
+                            onClick={() => handleNavChange(e.id)}
                         >
                             <div className={`dot ${e.active ? 'dot-active' : ''}`}></div>
                             <div className={`line ${e.active ? 'line-active' : ''}`}></div>
