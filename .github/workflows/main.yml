@@ -1,0 +1,35 @@
+name: Deploy website on push
+
+on: 
+  push:
+    branches:
+      - main  # Change this to your default branch
+
+jobs:
+  FTP-Deploy-Action:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v2
+    
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'  # Specify the Node.js version you want to use
+    
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the React app
+      run: npm run build
+
+    - name: FTP deploy action
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}          # FTP server address
+        username: ${{ secrets.FTP_USERNAME }}      # FTP username
+        password: ${{ secrets.FTP_PASSWORD }}      # FTP password
+        local-dir: ./dist                         # Local build directory
+        server-dir: public_html/     # Path on the FTP server to deploy to
